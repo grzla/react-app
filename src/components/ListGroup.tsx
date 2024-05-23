@@ -3,11 +3,12 @@ function ListGroup() {
 
   items = [];
 
-  // items.map( item => <li>{item}</li>)
+  const message = items.length === 0 ? <p>No item found</p> : null;
+
   return (
     <>
       <h1>List</h1>
-      {items.length === 0 ? <p>No item found</p> : null}
+      {message}
       <ul Name="list-group">
         {items.map((item) => (
           <li key={item}>{item}</li>
